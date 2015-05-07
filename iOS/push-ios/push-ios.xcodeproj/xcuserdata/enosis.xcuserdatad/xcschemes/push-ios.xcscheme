@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "303768801AFA075100F46161"
-               BuildableName = "iOS.app"
-               BlueprintName = "iOS"
-               ReferencedContainer = "container:iOS.xcodeproj">
+               BlueprintIdentifier = "30149EE51AFB40F500D3188E"
+               BuildableName = "push-ios.app"
+               BlueprintName = "push-ios"
+               ReferencedContainer = "container:push-ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3037689C1AFA075200F46161"
-               BuildableName = "iOSTests.xctest"
-               BlueprintName = "iOSTests"
-               ReferencedContainer = "container:iOS.xcodeproj">
+               BlueprintIdentifier = "30149EFE1AFB40F500D3188E"
+               BuildableName = "push-iosTests.xctest"
+               BlueprintName = "push-iosTests"
+               ReferencedContainer = "container:push-ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3037689C1AFA075200F46161"
-               BuildableName = "iOSTests.xctest"
-               BlueprintName = "iOSTests"
-               ReferencedContainer = "container:iOS.xcodeproj">
+               BlueprintIdentifier = "30149EFE1AFB40F500D3188E"
+               BuildableName = "push-iosTests.xctest"
+               BlueprintName = "push-iosTests"
+               ReferencedContainer = "container:push-ios.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "303768801AFA075100F46161"
-            BuildableName = "iOS.app"
-            BlueprintName = "iOS"
-            ReferencedContainer = "container:iOS.xcodeproj">
+            BlueprintIdentifier = "30149EE51AFB40F500D3188E"
+            BuildableName = "push-ios.app"
+            BlueprintName = "push-ios"
+            ReferencedContainer = "container:push-ios.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,10 +76,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "303768801AFA075100F46161"
-            BuildableName = "iOS.app"
-            BlueprintName = "iOS"
-            ReferencedContainer = "container:iOS.xcodeproj">
+            BlueprintIdentifier = "30149EE51AFB40F500D3188E"
+            BuildableName = "push-ios.app"
+            BlueprintName = "push-ios"
+            ReferencedContainer = "container:push-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,10 +95,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "303768801AFA075100F46161"
-            BuildableName = "iOS.app"
-            BlueprintName = "iOS"
-            ReferencedContainer = "container:iOS.xcodeproj">
+            BlueprintIdentifier = "30149EE51AFB40F500D3188E"
+            BuildableName = "push-ios.app"
+            BlueprintName = "push-ios"
+            ReferencedContainer = "container:push-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

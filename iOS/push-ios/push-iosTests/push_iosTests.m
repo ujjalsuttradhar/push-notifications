@@ -1,19 +1,19 @@
 //
-//  iOSTests.m
-//  iOSTests
+//  push_iosTests.m
+//  push-iosTests
 //
-//  Created by Enosis on 5/6/15.
+//  Created by Enosis on 5/7/15.
 //  Copyright (c) 2015 Enosis. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface iOSTests : XCTestCase
+@interface push_iosTests : XCTestCase
 
 @end
 
-@implementation iOSTests
+@implementation push_iosTests
 
 - (void)setUp {
     [super setUp];
