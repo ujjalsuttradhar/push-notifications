@@ -13,7 +13,7 @@ push-notifications is an example of using remote push notification in both Andro
 7. Now open webservice/index.php which will show a list of devices. Select anyone of them and press submit to send a push notification
 
 
-# Expiration of Apple push notification
+# Information about Apple push notification
 1. Apple Push Notification service includes a default Quality of Service (QoS) component that performs a store-and-forward function.
 
 2. If APNs attempts to deliver a notification but the device is offline, the notification is stored for a limited period of time, and delivered to the device when it becomes available.
@@ -21,6 +21,8 @@ push-notifications is an example of using remote push notification in both Andro
 3. Only one recent notification for a particular app is stored. If multiple notifications are sent while the device is offline, each new notification causes the prior notification to be discarded. This behavior of keeping only the newest notification is referred to as coalescing notifications.
 
 4. If the device remains offline for a long time, any notifications that were being stored for it are discarded.
+
+5. In iOS 8 and later, the maximum size allowed for a notification payload is 2 kilobytes; Apple Push Notification service refuses any notification that exceeds this limit. (Prior to iOS 8 and in OS X, the maximum payload size is 256 bytes.)
 
 # Expiration of GCM push notification
 - N/A
