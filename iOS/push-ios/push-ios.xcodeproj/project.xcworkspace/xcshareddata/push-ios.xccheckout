@@ -14,11 +14,11 @@
 		<string>https://github.com/ujjalsuttradhar/push-notifications.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>push-ios/push-ios.xcodeproj</string>
+	<string>iOS/push-ios/push-ios.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>ABAF13E4D9113A3012C428519E93281BE5535B1C</key>
-		<string>../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/ujjalsuttradhar/push-notifications.git</string>

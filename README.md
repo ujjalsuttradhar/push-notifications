@@ -7,10 +7,11 @@ push-notifications is an example of using remote push notification in both Andro
 2. Update database connection string in webservice/index.php line 12
 3. Open push-ios project using XCode.
 4. Update serviceURL (path to the webservice) in appDelegate.m
-5. Change PushIOS.pem file following the URL no 02 from reference list
-6. Open send_push_service.php and and update $passphrase
-7. Run push-ios from the device
-7. Now open webservice/index.php which will show a list of devices. Select anyone of them and press submit to send a push notification
+5. Change PushIOS.pem file following the [How to create PEM for a push notification enabled app](certificates/HowtocreatePEMforapushnotificationenabledapp.docx)
+6. Open webservice/classes/send_push_service.php and and update $passphrase
+7. Build the push-ios app using XCode
+7. Run push-ios in a device
+7. Open webservice/index.php which will show a list of devices. Select anyone of them and press submit to send a push notification
 
 
 # Information about Apple push notification
