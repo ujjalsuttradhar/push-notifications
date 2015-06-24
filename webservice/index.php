@@ -16,20 +16,32 @@ if(!$conn)
   echo "Connection Error \n";
 else 
   echo "Successfully Connected to Database. \n";
-    
-if(isset($_GET["type"]))
+ 
+
+if(isset($_GET["action_type"]))
 {    
-	if($_GET["type"] == "deviceInfo")
+	if($_GET["action_type"] == "deviceInfo")
 	{
-	   $deviceData = $_POST;
+	   $deviceData = $_REQUEST;
 	   $db->insertDeviceData($deviceData, $conn);
 	   echo "Success\n";
 	}
-	else if($_GET["type"] == "sendpush")
+	else if($_GET["action_type"] == "sendpush")
 	{
-          $deviceToken = $_POST['token'];
-          include 'classes/send_push_service.php';
-          sendPushToiOSDevice($deviceToken);
+          $deviceID = $_POST['device_id'];
+          $deviceInfo = $db->getDeviceInfoById($deviceID, $conn);
+ 
+    // Put your alert message here:
+    message = 'You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!';
+
+ 	  if($deviceInfo->os_type == 'iOS'){
+          include 'classes/send_push_service_ios.php';
+          sendPushToiOSDevice($deviceInfo->unique_id, $message);
+      	}
+      else {
+          include 'classes/send_push_service_android.php';
+          sendPushToAndroidDevice($deviceInfo->unique_id, $message);
+      }
     }
  exit;    
 }
