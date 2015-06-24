@@ -32,7 +32,7 @@ if(isset($_GET["action_type"]))
           $deviceInfo = $db->getDeviceInfoById($deviceID, $conn);
  
     // Put your alert message here:
-    message = 'You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!You have some important notifications!!!';
+    $message = 'High Temperature in Refrigerator!!!';
 
  	  if($deviceInfo->os_type == 'iOS'){
           include 'classes/send_push_service_ios.php';
