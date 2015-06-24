@@ -23,7 +23,7 @@ class dbhandler{
     }
 
     function insertDeviceData($deviceData, $conn){
-        $query =  "INSERT INTO devices (username, unique_id, os_type) VALUES ('".$deviceData["username"]."', '".$deviceData["device_token"]."', '".$deviceData["os_type"]."')";
+        $query =  "INSERT INTO devices (username, unique_id, os_type) VALUES ('".$deviceData["device_name"]."', '".$deviceData["token"]."', '".$deviceData["type"]."')";
     	$res = mysqli_query($conn, $query);
         $device_id = mysqli_insert_id($conn);
         $this->prefereanceData($device_id, $deviceData, $conn);
@@ -34,17 +34,25 @@ class dbhandler{
         $device_id = mysqli_insert_id($conn);
     }
 
-    function get(){
-
+    function getDeviceInfoById($id, $conn){
+    	$query =  "SELECT * FROM devices as d Left Join device_preference as dp ON d.id = dp.device_id Where d.id = ".$id;
+    	$result = mysqli_query($conn, $query);
+         
+         
+    	if ($obj = mysqli_fetch_object($result))
+        {
+           return $obj;
+        }
+        return false;
     }
 
-	function getAllDevices($conn){
-    	$query =  "SELECT * FROM devices as d Left Join device_preference as dp ON d.id = dp.device_id";
-    	$result = mysqli_query($conn, $query);
+    function getAllDevices($conn){
+        $query =  "SELECT * FROM devices as d Left Join device_preference as dp ON d.id = dp.device_id";
+        $result = mysqli_query($conn, $query);
          
         $tokens = array();
          
-    	while ($obj = mysqli_fetch_object($result))
+        while ($obj = mysqli_fetch_object($result))
         {
            $tokens[] = $obj;
         }
