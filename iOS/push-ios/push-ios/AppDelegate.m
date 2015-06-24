@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#define serviceURL @"http://192.168.1.64:8888/push-notifications/webservice/index.php?type=deviceInfo"
+#define serviceURL @"http://192.168.1.64:8888/push-notifications/webservice/index.php?action_type=deviceInfo"
 
 @interface AppDelegate ()
 
@@ -46,7 +46,7 @@
     
     NSMutableData *requestBody = [NSMutableData data];
     
-    [requestBody appendData:[[NSString stringWithFormat:@"username=%@&device_token=%@&os_type=iOS", @"ujjal", deviceToken] dataUsingEncoding:NSUTF8StringEncoding]];
+    [requestBody appendData:[[NSString stringWithFormat:@"device_name=%@&token=%@&type=iOS", @"Ujjal", deviceToken] dataUsingEncoding:NSUTF8StringEncoding]];
     [request setHTTPBody: requestBody];
     NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse: nil error: nil];
     
@@ -66,6 +66,19 @@
     CFRelease(UUID);
     CFRelease(UUIDString);
     return aNSString;
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    
+    // This get's the number you sent in the push and update your app badge.
+    [UIApplication sharedApplication].applicationIconBadgeNumber = [[userInfo objectForKey:@"badge"] integerValue];
+    
+    // Shows an alert in case the app is open, otherwise it won't notify anything
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Notification!"
+                                                        message:[[userInfo objectForKey:@"aps"] objectForKey:@"alert"]  delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    [alertView show];    
 }
 
 @end

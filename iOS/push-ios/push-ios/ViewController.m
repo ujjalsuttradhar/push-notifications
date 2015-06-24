@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    // This get's the number you sent in the push and update your app badge.
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
 }
 
 - (void)didReceiveMemoryWarning {
