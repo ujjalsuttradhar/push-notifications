@@ -11,7 +11,7 @@ push-notifications is an example of using remote push notification in both Andro
 6. Open webservice/classes/send_push_service.php and and update $passphrase
 7. Build the push-ios app using XCode
 7. Run push-ios in a device
-7. Open webservice/index.php which will show a list of devices. Select anyone of them and press submit to send a push notification
+7. Open webservice/index.php which will show a list of devices. Select anyone of iOS type and press submit to send a push notification
 
 
 # Information about Apple push notification
@@ -27,6 +27,18 @@ push-notifications is an example of using remote push notification in both Andro
 
 # Expiration of GCM push notification
 - N/A
+ 
+# How to execute (Android)?
+1. Dump push_notification.sql on your database.
+2. Update database connection string in webservice/index.php line 12
+3. Open android-push project using Eclipse.
+4. Update addDeviceURL (path to the webservice) in MainActivity.java (Line 133)
+5. Create a project in Google's developers console following [How to create a new project in Google Developers Console](certificates/HowtogetSenderIDandAPIKey.docx)
+6. Open android-push/src/net/ujjal/android_push/MainActivity.java (Line 36 ) and update SENDER_ID;
+7. Open webservice/classes/send_push_service_android.php (Line 5) and update Google API Key
+7. Build the android app using eclipse
+7. Run android-push in a device
+7. Open webservice/index.php which will show a list of devices. Select anyone of android type and press submit to send a push notification
 
 # References
 1. [developer.apple.com](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringPushNotifications/ConfiguringPushNotifications.html)
