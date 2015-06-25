@@ -11,7 +11,7 @@ function sendPushToAndroidDevice($deviceToken, $message)
  
         $fields = array(
             'registration_ids' => array($deviceToken),
-            'data' => array("SiteSage-"=> $message),
+            'data' => array("Android_Push"=> $message, "Location_id" => "3489"),
         );
  
         $headers = array(
