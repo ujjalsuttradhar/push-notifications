@@ -11,7 +11,7 @@ function sendPushToAndroidDevice($deviceToken, $message)
  
         $fields = array(
             'registration_ids' => array($deviceToken),
-            'data' => array("Android_Push"=> $message, "Location_id" => "3489"),
+            'data' => array("Android_Push"=> $message, "location_id" => "3489", "badge" => "10"),
         );
  
         $headers = array(
